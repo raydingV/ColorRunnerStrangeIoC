@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 305ec50664d564b4e99957345d82a716, type: 3}
+  m_Script: {fileID: 11500000, guid: d25503f1694e51043a6f8bd44ef2296b, type: 3}
   m_Name: ES3Defaults
   m_EditorClassIdentifier: 
   settings:
@@ -33,18 +33,20 @@ MonoBehaviour:
     - ES3.Runtime
     - sc.stylizedwater2.runtime
     - StompyRobot.SRF
-    - Assembly-CSharp
     - Cinemachine
-    - Boxophobic.Utils.Editor
+    - Assembly-CSharp
     - rich-base.editor
+    - Boxophobic.Utils.Editor
     - Assembly-CSharp-firstpass
     - PPv2URPConverters
+    - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - StompyRobot.SRDebugger
     - Boxophobic.PolyverseSkies.Editor
     - Boxophobic.Utils.Scripts
     - StompyRobot.SRDebugger.Editor
     - sc.stylizedwater2.editor
     - StompyRobot.SRF.Editor
+    - Sirenix.OdinInspector.CompatibilityLayer
     - Boxophobic.PolyverseSkies.Runtime
     - Boxophobic.PolyverseSkies.Scripts
     - Sirenix.OdinInspector.Modules.UnityMathematics

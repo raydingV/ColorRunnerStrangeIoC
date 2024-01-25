@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: OdinModuleConfig
   m_EditorClassIdentifier: 
   configurations: []
-  ModuleTogglingSettings: 1
-  ModuleUpdateSettings: 1
+  ModuleTogglingSettings: 0
+  ModuleUpdateSettings: 0
