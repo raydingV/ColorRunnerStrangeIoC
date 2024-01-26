@@ -11,6 +11,7 @@ TagManager:
   - MiniGameArea
   - Missile
   - CollorStage
+  - Stack
   layers:
   - Default
   - TransparentFX

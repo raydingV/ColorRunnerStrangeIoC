@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using Rich.Base.Runtime.Concrete.Injectable.Mediator;
 using Runtime.Model.Player;
@@ -17,6 +18,8 @@ namespace Runtime.Mediators.Player
         [Inject] public CoreGameSignals CoreGameSignals { get; set; }
 
         [Inject] public UISignals UISignals { get; set; }
+        
+        private List<GameObject> stackedObjects = new List<GameObject>();
 
         public override void OnRegister()
         {
@@ -30,6 +33,8 @@ namespace Runtime.Mediators.Player
             View.onReset += OnReset;
             View.onStageAreaEntered += OnStageAreaEntered;
             View.onFinishAreaEntered += OnFinishAreaEntered;
+            View.onColorAreaEntered += OnColorAreaEntered;
+            View.stackTrigger += stackTrigger;
         }
 
 
@@ -60,6 +65,26 @@ namespace Runtime.Mediators.Player
                     Debug.Log("TRYTRY");
                 }
             });
+        }
+
+        private void OnColorAreaEntered(Transform view, Collider other, Material material)
+        {
+            if (material != null)
+            {
+                Material otherMaterial = other.GetComponent<Renderer>().material;
+                
+                material.color = otherMaterial.color;
+            }
+        }
+
+        private void stackTrigger(Transform view, Collider other, Transform player)
+        {
+            stackedObjects.Add(other.gameObject);
+
+            Vector3 stackedPosition = new Vector3(player.transform.position.x, player.transform.position.y - 0.58f, player.transform.position.z - 1.5f * stackedObjects.Count);
+
+            other.transform.parent = player.transform;
+            other.transform.position = stackedPosition;
         }
 
         private void StageAreaSuccessful(byte obj)
@@ -93,6 +118,8 @@ namespace Runtime.Mediators.Player
             View.onReset -= OnReset;
             View.onStageAreaEntered -= OnStageAreaEntered;
             View.onFinishAreaEntered -= OnFinishAreaEntered;
+            View.onColorAreaEntered -= OnColorAreaEntered;
+            View.stackTrigger -= stackTrigger;
         }
 
         public override void OnEnabled()

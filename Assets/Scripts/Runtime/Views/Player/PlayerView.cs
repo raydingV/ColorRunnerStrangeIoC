@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using Rich.Base.Runtime.Abstract.View;
 using Runtime.Data.ValueObject;
@@ -18,6 +19,8 @@ namespace Runtime.Views.Player
 
         public UnityAction onReset = delegate { };
         public UnityAction<Transform, Transform> onStageAreaEntered = delegate { };
+        public UnityAction<Transform, Collider, Material> onColorAreaEntered = delegate(Transform arg0, Collider collider1, Material material) {  };
+        public UnityAction<Transform, Collider, Transform> stackTrigger = delegate(Transform arg0, Collider collider1, Transform transform1) {  };
         public UnityAction onFinishAreaEntered = delegate { };
 
         #endregion
@@ -45,6 +48,7 @@ namespace Runtime.Views.Player
         private readonly string _colorStage = "CollorStage";
         private readonly string _finish = "FinishArea";
         private readonly string _miniGame = "MiniGameArea";
+        private readonly string _stack = "Stack";
 
         #endregion
 
@@ -133,7 +137,7 @@ namespace Runtime.Views.Player
 
             if (other.CompareTag(_colorStage))
             {
-                colorChange(other);
+                onColorAreaEntered?.Invoke(transform, other, _material);
             }
 
             if (other.CompareTag(_finish))
@@ -146,17 +150,13 @@ namespace Runtime.Views.Player
             {
                 //Write the MiniGame Mechanics
             }
-        }
 
-        void colorChange(Collider other)
-        {
-            if (_material != null)
+            if (other.CompareTag(_stack))
             {
-                Material otherMaterial = other.GetComponent<Renderer>().material;
-                
-                _material.color = otherMaterial.color;
+                stackTrigger?.Invoke(transform, other, transform);
             }
         }
+
 
         internal void ScaleUpPlayer()
         {
