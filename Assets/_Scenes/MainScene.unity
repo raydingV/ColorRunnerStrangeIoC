@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028326, g: 0.22571333, b: 0.30692202, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 363623672}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639b547be369046b3b02a99fe466f1dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 166cf734c04a47c42820caea8103f255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0
@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 484614641}
   - component: {fileID: 484614640}
   - component: {fileID: 484614643}
+  - component: {fileID: 484614644}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -508,6 +509,50 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &484614644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484614639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_AllowHDROutput: 1
+  m_UseScreenCoordOverride: 0
+  m_ScreenSizeOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_ScreenCoordScaleBias: {x: 0, y: 0, z: 0, w: 0}
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
+  m_TaaSettings:
+    quality: 3
+    frameInfluence: 0.1
+    jitterScale: 1
+    mipBias: 0
+    varianceClampScale: 0.9
+    contrastAdaptiveSharpening: 0
 --- !u!1 &836825508
 GameObject:
   m_ObjectHideFlags: 0
@@ -519,7 +564,6 @@ GameObject:
   - component: {fileID: 836825509}
   - component: {fileID: 836825511}
   - component: {fileID: 836825510}
-  - component: {fileID: 836825512}
   m_Layer: 0
   m_Name: CameraView
   m_TagString: Untagged
@@ -552,7 +596,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 836825508}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbfb7d7647524459ebb313b1b421e459, type: 3}
+  m_Script: {fileID: 11500000, guid: e7ba2004b8459da4ca8da68f06745826, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0
@@ -596,19 +640,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 62728980}
---- !u!114 &836825512
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 836825508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08fae332875944959390fa406ce78a17, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_XPosition: 0
 --- !u!1 &1535992546
 GameObject:
   m_ObjectHideFlags: 0
@@ -635,7 +666,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1535992546}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fd1df2c6f61c45ffa27a1972310ff62, type: 3}
+  m_Script: {fileID: 11500000, guid: 797b47031eb309449aedcfbe49b16631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1535992548
@@ -749,7 +780,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1932018196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f46f55eefb5e4ebf8c832ba6e2b572bc, type: 3}
+  m_Script: {fileID: 11500000, guid: 17edc678bc8449d40b6457e8b0156733, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1932018198
@@ -971,7 +1002,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7532323662132089208}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2897dbd77ddda485cbedf8f59cf6e536, type: 3}
+  m_Script: {fileID: 11500000, guid: fe0fd5fad3120b44a818a9f850598004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0

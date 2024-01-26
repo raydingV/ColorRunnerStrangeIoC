@@ -2,25 +2,45 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: StylizedWater2_Demo_DioramaTop
-  m_Shader: {fileID: 4800000, guid: f04c9486b297dd848909db26983c9ddb, type: 3}
-  m_ShaderKeywords: ADVANCED_LIGHTING _ADVANCED_SHADING _CAUSTICS _DEPTH_TEX _FOAM
-    _NORMALMAP _REFRACTION _SIMPLE_LIGHTING _SMOOTH_INTERSECTION _TRANSLUCENCY _WAVES
-    _WORLDSPACEUV_ON
+  m_Shader: {fileID: 4800000, guid: 22c8483a0088cff4ea29f92544b8304b, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords: []
+  m_InvalidKeywords:
+  - ADVANCED_LIGHTING
+  - _ADVANCED_SHADING
+  - _CAUSTICS
+  - _DEPTH_TEX
+  - _FOAM
+  - _NORMALMAP
+  - _REFRACTION
+  - _SIMPLE_LIGHTING
+  - _SMOOTH_INTERSECTION
+  - _TRANSLUCENCY
+  - _WAVES
+  - _WORLDSPACEUV_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    IGNOREPROJECTOR: False
+    RenderType: Opaque
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -38,6 +58,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DepthTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveBorderRamp:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DissolveMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -81,10 +109,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _VertexAnimationMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _texcoord:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - Vector1_1942CF3A: 1
     - Vector1_BE75C478: 32
@@ -92,11 +125,16 @@ Material:
     - Vector1_E796673B: 10
     - _ADVANCED_LIGHTING: 1
     - _AdvancedLighting: 1
+    - _AdvancedTab: 0
     - _Advanced_Lighting: 1
     - _AlphaClip: 0
+    - _AlphaClipping: 0
     - _AlphaCutoff: 0.5
     - _AnimationSpeed: 1
     - _Blend: 0
+    - _BlendDst: 0
+    - _BlendSrc: 1
+    - _Brightness: 1
     - _BumpScale: 1
     - _CROSSPAN_INTERSECTIONOn: 1
     - _CausticsBrightness: 2
@@ -104,6 +142,8 @@ Material:
     - _CausticsOn: 1
     - _CausticsSpeed: 0.1
     - _CausticsTiling: 0.2
+    - _ColorGrading: 0
+    - _Contrast: 1
     - _CrossPan_IntersectionOn: 0
     - _Cull: 2
     - _Cutoff: 0.5
@@ -112,6 +152,10 @@ Material:
     - _DepthMode: 0
     - _DepthTexture: 1
     - _DisableDepthTexture: 0
+    - _Dissolve: 0
+    - _DissolveAmount: 0.5
+    - _DissolveBorderSize: 0.25
+    - _DissolveMapScale: 1
     - _DstBlend: 0
     - _EdgeFade: 7
     - _EnvironmentReflections: 1
@@ -127,6 +171,8 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _HorizonDistance: 5.8
+    - _Initialized: 1
+    - _InputTab: 1
     - _IntersectionClipping: 0.583
     - _IntersectionFalloff: 1
     - _IntersectionLength: 2.81
@@ -148,6 +194,7 @@ Material:
     - _NormalStrength: 0.322
     - _NormalTiling: 0.11000009
     - _OcclusionStrength: 1
+    - _OptionsTab: 1
     - _PlanarReflectionsEnabled: 0
     - _PlanarReflectionsParams: 0
     - _PointSpotLightReflectionExp: 64
@@ -161,9 +208,12 @@ Material:
     - _RefractionAmount: 0.05
     - _RefractionOn: 1
     - _RefractionStrength: 0
+    - _RenderFace: 2
+    - _RenderPriority: 0
     - _RimRize: 1
     - _RimTiling: 0.025
     - _SHARP_INERSECTIONOn: 1
+    - _Saturation: 1
     - _ShadingMode: 1
     - _ShadowStrength: 0.6
     - _ShoreLineLength: 3.1
@@ -176,6 +226,15 @@ Material:
     - _SparkleSize: 0.155
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _Stencil: 1
+    - _StencilComp: 8
+    - _StencilFail: 0
+    - _StencilPass: 0
+    - _StencilReadMask: 255
+    - _StencilRef: 0
+    - _StencilWriteMask: 255
+    - _StencilZFail: 0
+    - _StylizeTab: 0
     - _SunReflectionDistortion: 0.612
     - _SunReflectionPerturbance: 1
     - _SunReflectionSize: 0.696
@@ -185,6 +244,9 @@ Material:
     - _Texture_IntersectionOn: 1
     - _Tiling: 0.5
     - _Translucency: 1
+    - _VertexAnimation: 0
+    - _VertexAnimationIntensity: 0.05
+    - _VertexAnimationStutter: 0
     - _WaveCount: 3
     - _WaveDistance: 0.96
     - _WaveHeight: 1.22
@@ -195,12 +257,15 @@ Material:
     - _WavesOn: 1
     - _WorkflowMode: 1
     - _WorldSpaceUV: 1
+    - _ZTest: 4
     - _ZWrite: 1
     m_Colors:
+    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
     - _AnimationParams: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 0, g: 0.11079889, b: 0.2264151, a: 1}
     - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _DepthMapBounds: {r: -402.3, g: -459.43, b: 0.0012693577, a: 0}
+    - _DissolveBorderColor: {r: 1, g: 1, b: 1, a: 1}
     - _DistanceNormalParams: {r: 100, g: 300, b: 0.25, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FoamColor: {r: 1, g: 1, b: 1, a: 1}
@@ -211,11 +276,13 @@ Material:
     - _SlopeParams: {r: 0.5, g: 4, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
     - _TranslucencyParams: {r: 1, g: 5.16, b: 0, a: 0}
+    - _VertexAnimationFrequency: {r: 2.5, g: 2.5, b: 2.5, a: 1}
     - _VertexColorMask: {r: 0, g: 0, b: 0, a: 0}
     - _WaterColor: {r: 0.21176466, g: 0.6745098, b: 1, a: 1}
     - _WaterShallowColor: {r: 0, g: 0.9394503, b: 1, a: 1}
     - _WaveDirection: {r: 1, g: 1, b: 1, a: 1}
     - _WaveFadeDistance: {r: 191.13924, g: 341.13934, b: 0, a: 0}
+  m_BuildTextureStacks: []
 --- !u!114 &6498140463000427223
 MonoBehaviour:
   m_ObjectHideFlags: 11

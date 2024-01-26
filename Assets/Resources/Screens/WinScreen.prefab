@@ -67,9 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'TOTAL POINTS : 0'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b55e1584795e4c44cbd530483359e699, type: 2}
-  m_sharedMaterial: {fileID: 2524076245017955669, guid: b55e1584795e4c44cbd530483359e699,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -618,7 +617,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 540332708980792701}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d721d1745f04f26a95d9b17b1b5cb51, type: 3}
+  m_Script: {fileID: 11500000, guid: 09d9ab71d6443364d80ee6d11cbccf29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0

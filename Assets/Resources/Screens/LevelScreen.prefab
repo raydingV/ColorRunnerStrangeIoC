@@ -105,9 +105,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: -1000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b55e1584795e4c44cbd530483359e699, type: 2}
-  m_sharedMaterial: {fileID: 2524076245017955669, guid: b55e1584795e4c44cbd530483359e699,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -131,7 +130,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 27.4
+  m_fontSize: 31.35
   m_fontSizeBase: 29.24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -391,9 +390,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 10000
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b55e1584795e4c44cbd530483359e699, type: 2}
-  m_sharedMaterial: {fileID: 2524076245017955669, guid: b55e1584795e4c44cbd530483359e699,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -417,7 +415,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 21.7
+  m_fontSize: 25.1
   m_fontSizeBase: 29.24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -505,7 +503,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7282406559574445235}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f7be84d647c74890826ce1969aea74f6, type: 3}
+  m_Script: {fileID: 11500000, guid: dff8dee9f4baab34fb600aecba7a368d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0
@@ -514,8 +512,8 @@ MonoBehaviour:
   - {fileID: 5729893160850888512}
   - {fileID: 7480261392054910708}
   levelTexts:
-  - {fileID: 7702745728444136079}
   - {fileID: 7282406559161290254}
+  - {fileID: 7702745728444136079}
 --- !u!1 &7282406559960353193
 GameObject:
   m_ObjectHideFlags: 0

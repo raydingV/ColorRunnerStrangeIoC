@@ -353,9 +353,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TRY AGAIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b55e1584795e4c44cbd530483359e699, type: 2}
-  m_sharedMaterial: {fileID: 2524076245017955669, guid: b55e1584795e4c44cbd530483359e699,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -467,7 +466,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5487448538868969211}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08abf5bee10a4c858d35164944a327c7, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b03d4cf11f10948ab7caa39d18ccf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _showDebug: 0
@@ -538,9 +537,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level Failed
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b55e1584795e4c44cbd530483359e699, type: 2}
-  m_sharedMaterial: {fileID: 2524076245017955669, guid: b55e1584795e4c44cbd530483359e699,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: c382ab10c46c2e64c860e0b134a888a2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
