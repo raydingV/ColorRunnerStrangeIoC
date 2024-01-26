@@ -12,6 +12,7 @@ TagManager:
   - Missile
   - CollorStage
   - Stack
+  - ColorPlane
   layers:
   - Default
   - TransparentFX

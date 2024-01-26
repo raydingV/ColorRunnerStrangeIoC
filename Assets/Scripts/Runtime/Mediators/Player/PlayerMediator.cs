@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using Rich.Base.Runtime.Concrete.Injectable.Mediator;
+using Runtime.Controller;
 using Runtime.Model.Player;
 using Runtime.Signals;
 using Runtime.Views.Player;
@@ -34,6 +36,7 @@ namespace Runtime.Mediators.Player
             View.onStageAreaEntered += OnStageAreaEntered;
             View.onFinishAreaEntered += OnFinishAreaEntered;
             View.onColorAreaEntered += OnColorAreaEntered;
+            View.onColorPlaneEntered += OnColorPlaneEntered;
             View.stackTrigger += stackTrigger;
         }
 
@@ -76,17 +79,32 @@ namespace Runtime.Mediators.Player
                 material.color = otherMaterial.color;
             }
         }
-
-        private void stackTrigger(Transform view, Collider other, Transform player)
+        
+        private void stackTrigger(Transform view, Collider other)
         {
             stackedObjects.Add(other.gameObject);
 
-            Vector3 stackedPosition = new Vector3(player.transform.position.x, player.transform.position.y - 0.58f, player.transform.position.z - 1.5f * stackedObjects.Count);
+            Vector3 stackedPosition = new Vector3(view.transform.position.x, view.transform.position.y - 0.58f, view.transform.position.z - 1.5f * stackedObjects.Count);
 
-            other.transform.parent = player.transform;
+            other.transform.parent = view.transform;
             other.transform.position = stackedPosition;
         }
 
+        private void OnColorPlaneEntered(Transform view, Collider other, Material material)
+        {
+            if (material != null)
+            {
+                Material otherMaterial = other.GetComponent<Renderer>().material;
+                
+                if (material.color != otherMaterial.color)
+                {
+                   GameObject.Destroy(stackedObjects.Last());
+
+                   stackedObjects.Remove(stackedObjects.Last());
+                }
+            }
+        }
+        
         private void StageAreaSuccessful(byte obj)
         {
             Model.StageValue++;
@@ -119,6 +137,7 @@ namespace Runtime.Mediators.Player
             View.onStageAreaEntered -= OnStageAreaEntered;
             View.onFinishAreaEntered -= OnFinishAreaEntered;
             View.onColorAreaEntered -= OnColorAreaEntered;
+            View.onColorPlaneEntered -= OnColorPlaneEntered;
             View.stackTrigger -= stackTrigger;
         }
 

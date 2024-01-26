@@ -20,7 +20,8 @@ namespace Runtime.Views.Player
         public UnityAction onReset = delegate { };
         public UnityAction<Transform, Transform> onStageAreaEntered = delegate { };
         public UnityAction<Transform, Collider, Material> onColorAreaEntered = delegate(Transform arg0, Collider collider1, Material material) {  };
-        public UnityAction<Transform, Collider, Transform> stackTrigger = delegate(Transform arg0, Collider collider1, Transform transform1) {  };
+        public UnityAction<Transform, Collider> stackTrigger = delegate(Transform arg0, Collider collider1) {  };
+        public UnityAction<Transform, Collider, Material> onColorPlaneEntered = delegate(Transform arg0, Collider collider1, Material material) {  };
         public UnityAction onFinishAreaEntered = delegate { };
 
         #endregion
@@ -49,6 +50,7 @@ namespace Runtime.Views.Player
         private readonly string _finish = "FinishArea";
         private readonly string _miniGame = "MiniGameArea";
         private readonly string _stack = "Stack";
+        private readonly string _colorPlane = "ColorPlane";
 
         #endregion
 
@@ -153,7 +155,12 @@ namespace Runtime.Views.Player
 
             if (other.CompareTag(_stack))
             {
-                stackTrigger?.Invoke(transform, other, transform);
+                stackTrigger?.Invoke(transform, other);
+            }
+
+            if (other.CompareTag(_colorPlane))
+            {
+                onColorPlaneEntered?.Invoke(transform, other, _material);
             }
         }
 
