@@ -28,6 +28,7 @@ namespace Runtime.Views.Player
         [SerializeField] private new Renderer renderer;
         [SerializeField] private TextMeshPro scaleText;
         [SerializeField] private ParticleSystem confettiParticle;
+        [SerializeField] private Material _material;
 
         #endregion
 
@@ -41,6 +42,7 @@ namespace Runtime.Views.Player
 
 
         private readonly string _stageArea = "StageArea";
+        private readonly string _colorStage = "CollorStage";
         private readonly string _finish = "FinishArea";
         private readonly string _miniGame = "MiniGameArea";
 
@@ -126,7 +128,12 @@ namespace Runtime.Views.Player
         {
             if (other.CompareTag(_stageArea))
             {
-                onStageAreaEntered?.Invoke(transform, other.transform.parent.transform);
+                //null
+            }
+
+            if (other.CompareTag(_colorStage))
+            {
+                colorChange(other);
             }
 
             if (other.CompareTag(_finish))
@@ -141,6 +148,15 @@ namespace Runtime.Views.Player
             }
         }
 
+        void colorChange(Collider other)
+        {
+            if (_material != null)
+            {
+                Material otherMaterial = other.GetComponent<Renderer>().material;
+                
+                _material.color = otherMaterial.color;
+            }
+        }
 
         internal void ScaleUpPlayer()
         {

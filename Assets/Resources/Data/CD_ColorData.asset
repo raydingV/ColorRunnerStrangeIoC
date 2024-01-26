@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: CD_ColorData
   m_EditorClassIdentifier: 
   Colors:
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-  - Color: {r: 0, g: 0, b: 0, a: 0}
-  - Color: {r: 0, g: 0, b: 0, a: 0}
+  - Color: {r: 0.43401724, g: 0.8018868, b: 0.38203096, a: 0}
+  - Color: {r: 0.30196083, g: 0.50885934, b: 0.8117647, a: 0}
