@@ -145,6 +145,7 @@ namespace Runtime.Views.Player
             if (other.CompareTag(_finish))
             {
                 onFinishAreaEntered?.Invoke();
+                IsReadyToPlay(false);
                 return;
             }
 

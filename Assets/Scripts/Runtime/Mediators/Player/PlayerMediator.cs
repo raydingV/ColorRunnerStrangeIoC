@@ -88,6 +88,8 @@ namespace Runtime.Mediators.Player
 
             other.transform.parent = view.transform;
             other.transform.position = stackedPosition;
+            
+            Debug.Log("Score: " + stackedObjects.Count);
         }
 
         private void OnColorPlaneEntered(Transform view, Collider other, Material material)
@@ -96,11 +98,13 @@ namespace Runtime.Mediators.Player
             {
                 Material otherMaterial = other.GetComponent<Renderer>().material;
                 
-                if (material.color != otherMaterial.color)
+                if (material.color != otherMaterial.color && stackedObjects.Count >= 1)
                 {
                    GameObject.Destroy(stackedObjects.Last());
 
                    stackedObjects.Remove(stackedObjects.Last());
+                   
+                   Debug.Log("Score: " + stackedObjects.Count);
                 }
             }
         }

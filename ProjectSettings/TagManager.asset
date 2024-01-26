@@ -13,6 +13,7 @@ TagManager:
   - CollorStage
   - Stack
   - ColorPlane
+  - FinishLine
   layers:
   - Default
   - TransparentFX
