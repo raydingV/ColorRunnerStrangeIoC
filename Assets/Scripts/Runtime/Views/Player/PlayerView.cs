@@ -127,8 +127,6 @@ namespace Runtime.Views.Player
             if (other.CompareTag(_stageArea))
             {
                 onStageAreaEntered?.Invoke(transform, other.transform.parent.transform);
-
-                IsReadyToPlay(false);
             }
 
             if (other.CompareTag(_finish))

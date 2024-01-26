@@ -57,6 +57,7 @@ namespace Runtime.Mediators.Player
                 else
                 {
                     CoreGameSignals.onLevelFailed.Dispatch();
+                    Debug.Log("TRYTRY");
                 }
             });
         }
